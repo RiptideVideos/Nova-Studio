@@ -22,7 +22,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  height: 12rem;
+  height: 13rem;
   background-color: var(--clr1);
 }
 
@@ -49,7 +49,7 @@
   height: 3rem;
   font-size: 1.1rem;
   color: var(--clr2);
-  background-color: var(--clr1);
+  background-color: rgba(0,0,0,0.0);
   border: 2.4px solid var(--clr2);
 }
 .btnA:hover{
@@ -161,7 +161,42 @@
 body{
   background-color: var(--clr1)
 }
+.newlogo{
+  margin-bottom: 1rem;
+  width: 50rem;
+}
+ .myVideo {
+    width: 100%;
+    padding: 0%;
+    opacity: 0;
+    animation: fade 6s ease-in-out forwards;
+  }
 
+.myVideo.paused {
+  animation-play-state: paused;
+}
+  @keyframes fade {
+    0% {opacity: 0;}
+    5% {opacity: 1;}
+    75% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+   html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%
+  }
+  #logo {
+    opacity: 0;
+    animation: logofade 6s ease-in-out forwards;
+    margin-top: -50%;
+  }
+  @keyframes logofade {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    35% {opacity: 1;}
+    100% {opacity: 1;}
+  }
 @media screen and (min-width: 1300px) and (max-width: 1600px) {
   .imgcen{
     width: 30%;
@@ -169,8 +204,11 @@ body{
   .btnA{
     width: 15rem;
   }
-  .headerchild{
-    gap: 4rem;
+  .newlogo{
+    margin-bottom: 8rem;
+  }
+  .myVideo{
+    width: 100rem;
   }
 }
 @media screen and (min-width: 880px) and (max-width: 1300px){
@@ -189,6 +227,9 @@ body{
     align-items: center;
     margin: 0 auto;
   }
+  .newlogo{
+    margin-bottom: 6rem;
+  }
 }
 @media screen and (min-width: 620px) and (max-width: 880px){
   .imgcen{
@@ -206,8 +247,14 @@ body{
     align-items: center;
     margin: 0 auto;
   }
+  .newlogo{
+    height: auto;
+  }
 }
 @media screen and (min-width: 0px) and (max-width: 619px){
+  .myVideo{
+    height: 110000px;
+  }
   .imgcen{
     width: 50%;
   }
@@ -226,5 +273,8 @@ body{
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+  }
+  .newlogo {
+    width: 100%;
   }
 }

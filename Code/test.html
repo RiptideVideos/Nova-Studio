@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Test Site</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <video width="100%" class="myVideo" autoplay muted playsinline loop>
+        <source src="Assets/Assets/BG.mp4" type="video/mp4">
+    </video>
+
+    <div id="logo">
+        <img src="Assets/Assets/novafull.png" class="imgcen newlogo">
+        <div class="headerchild" style="margin-top: -12rem; margin-bottom: 40rem;">
+    <a href="kits.html"><button class="btnA dm-sans" > Season 10 Kits </button></a>
+    <a href="boots.html"> <button class="btnA dm-sans" > Season 10 Boots </button> </a>
+    <a href="novaballers.html"> <button class="btnA dm-sans"> Nova-Ballers Cup </button> </a>
+    <a href="bngames.html"> <button class="btnA dm-sans"> BN Games </button> </a>
+  </div>
+    </div>
+    <br style="margin-bottom: 50rem;">
+
+    <h1 class="dm-sans showtext" style="margin-left: 20rem; font-size: 5rem;">Premium Design For All</h1>
+    <hr class="hr1" style="display: flex; justify-content: flex-start; margin-left: 20rem;">
+    <p class="dm-sans showtext" style="display: flex; justify-content: flex-start; margin-left: 20rem; font-size: 2rem; width: 50%;">Nova Studio combines state of the art tools and top notch creativity to create the best graphics, kits and boots in TML</p>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+    <h1 class="dm-sans showtext" style=" display: flex; justify-content: flex-end; margin-right: 20rem; font-size: 5rem;">View Season 11 Kits</h1>
+    <hr class="hr1" style="display: flex; justify-content: flex-end; margin-right: 20rem;">
+    <p class="dm-sans showtext txt1" style="display: flex; justify-content: flex-end; margin-right: 20rem; text-align: right;">With a brand new design, our Season 11 kits are reimagining a industry</p>
+    <a href="kits11.html" style="display: flex; justify-content: flex-end; margin-right: 20rem; text-decoration: none;"><button class="btnA dm-sans" > Season 11 Kits </button></a>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <h1 class="dm-sans showtext" style="margin-left: 20rem; font-size: 5rem;">The Only Provider of Boots</h1>
+    <hr class="hr1" style="display: flex; justify-content: flex-start; margin-left: 20rem;">
+    <p class="dm-sans showtext" style="display: flex; justify-content: flex-start; margin-left: 20rem; font-size: 2rem; width: 50%;">Nova Studio is the Only TML Enterprise to Offer Boots to Clubs, view our Season 11 boots below</p>
+    <a href="boots11.html" style="display: flex; justify-content: flex-start; margin-left: 20rem; text-decoration: none;"><button class="btnA dm-sans" > Season 11 Boots </button></a>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <h1 class="dm-sans showtext" style=" display: flex; justify-content: flex-end; margin-right: 20rem; font-size: 5rem;">Nova Ballers Cup</h1>
+    <hr class="hr1" style="display: flex; justify-content: flex-end; margin-right: 20rem;">
+    <p class="dm-sans showtext txt1" style="display: flex; justify-content: flex-end; margin-right: 20rem; text-align: right;">Nova Studio is proud to partner with Ballers to deliver the Best Pre-Season Cup</p>
+    <a href="novaballers.html" style="display: flex; justify-content: flex-end; margin-right: 20rem; text-decoration: none;"><button class="btnA dm-sans" > Nova-Ballers Cup </button></a>
+    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+    <h1 class="dm-sans showtext" style="margin-left: 20rem; font-size: 5rem;">Play MCFC 11 Today!</h1>
+    <hr class="hr1" style="display: flex; justify-content: flex-start; margin-left: 20rem;">
+    <p class="dm-sans showtext" style="display: flex; justify-content: flex-start; margin-left: 20rem; font-size: 2rem; width: 50%;">BN Game's: MCFC 11 is available for order today!</p>
+    <a href="bngames.html" style="display: flex; justify-content: flex-start; margin-left: 20rem; text-decoration: none;"><button class="btnA dm-sans" > Learn More </button></a>
+
+
+    <style>
+        .hr1{
+            background-color: var(--clr2);
+            width: 50%;
+            margin-top: -2rem;
+        }
+        .hr-animation{
+            animation: line 2s forwards;
+        }
+
+        .showtext{
+            opacity: 0;
+        }
+        .txt1{
+            font-size: 2rem;
+            margin-right: 0;
+            margin-left: auto;
+            width: 50%;
+           
+            align-items: center;
+        }
+        .show-animation{
+            animation: fadetext 3s forwards;
+        }
+        
+        @keyframes line {
+            0% {width: 0rem;}
+            100% {width: 50%;}
+        }
+        @keyframes fadetext {
+          0% {opacity: 0;}
+          100% {opacity: 1;}
+        }
+    </style>
+    <script>
+          const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show-animation");
+      obs.unobserve(entry.target); // only once
+    }
+  });
+}, { threshold: 0.5 });
+
+// observe all fade-in elements
+document.querySelectorAll(".showtext").forEach(el => observer.observe(el));
+
+
+
+          const observer2 = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("hr-animation");
+      obs.unobserve(entry.target); // only once
+    }
+  });
+}, { threshold: 0.5 });
+
+// observe all fade-in elements
+document.querySelectorAll(".hr1").forEach(el => observer2.observe(el));
+
+    </script>
+</body>
+</html>
